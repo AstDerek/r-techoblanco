@@ -189,3 +189,24 @@ text-indent: -9999px;
   clear: both;
   background: transparent url(%%techolares%%) no-repeat 50% 0;
 }
+
+.flair {
+    color: #ad704e;
+    font-weight: bold;
+}
+
+.flair:before {
+    content: "me";
+    color: #fff;
+    background-color: #6c6;
+    padding: 2px;
+    margin-right: 2px;
+}
+
+.flair:after {
+    content: "co";
+    color: #fff;
+    background-color: #c33;
+    padding: 2px;
+    margin-left: 2px;
+}
