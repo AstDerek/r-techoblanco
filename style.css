@@ -1,187 +1,937 @@
-a { color: #666; }
-h1, h2, h3 { color: #000; }
- 
-body {
-background-color: #fff;
-color: #000;
+body,.side {
+    font-weight:normal
 }
-#header {
-background-color: #fff;
-border: none;
-}
-#header-bottom-left,
- 
-.content,
-#siteTable { background-color: #fff; }
-.content .md {
-color: #000;
-font-family: arial;
-font-size: 1.2em;
-line-height: 1.6em;
-background-color: #fff;
-border: none;
-}
- 
-.tabmenu li a,
-.tabmenu li.selected a {
-border: none;
-padding: 6px 12px;
-background-color: #fff;
-color: #666;
-}
-.pagename a:after { content: ": SoloVino"; }
-.pagename a {
-font-size: 2em;
-padding: 3px 8px;
-}
- 
-.midcol {
-float: right;
-margin: auto 7px auto 4px;
-}
-.midcol.likes .score { color: #0c6; }
-.midcol.dislikes .score { color: #c06; }
-.listing-page .thing.link.self .midcol { display: none; }
-.thing { background-color: transparent; }
-.thing .rank {
-font-family: arial;
-font-size: medium;
-line-height: 1.6em;
-margin: 0;
-text-align: center;
-}
-.entry { position: relative; }
-.entry p.title, .content .md {
-border: none;
-padding: 6px;
-}
-.entry .title {
-font-family: arial;
-font-size: large;
-background-color: #fff;
-}
-.entry .title:first-letter { font-size: 2em; }
-.thing .title, .thing .title.loggedin { color: #666; }
-.thing .title:visited, .thing .title.click:visited, .thing .title.loggedin:visited, .thing .title.loggedin.click:visited { color: #66c; }
-.domain, .domain a { color: #666; }
-.entry .buttons li a { color: #666; }
-.entry .flat-list {
-display: inline-block;
-width: auto;
-}
-.entry .flat-list li { float: right; }
-.comment .child, .comment .showreplies {
-border: none;
-margin-left: 50px;
-}
- 
-.comment .tagline {
-display: inline-block;
-margin: 1px;
-padding: 3px;
-background-color: #fff;
-}
- 
-.comment .entry.unvoted .score.unvoted,
-.comment .entry.likes .score.likes,
-.comment .entry.dislikes .score.dislikes {
-display: inline-block;
-padding: 3px;
-border: none;
-color: #fff;
-background-color: #666;
-}
- 
-.tagline a { color: #666; }
-.tagline .submitter { color: #666; }
- 
-.tagline .author.submitter {
-display: inline-block;
-padding: 3px;
-border: none;
-background-color: #666;
-color: #fff;
-font-weight: normal;
-}
- 
+
 .side {
-padding: 340px 5px 0;
-font-family: arial;
-position: relative;
+    position:relative;
+    background:#fff;
+    width:300px;
+    margin:20px 10px 40px auto;
+    z-index:0;
+    padding:10px!important;
+    border:1px solid #ccc;
+    box-shadow:0px 1px #ddd;
+    overflow:hidden;
+    background-repeat:no-repeat;
+    background-position:top;
+    margin-top:20px;
+    z-index:100
 }
-.side .subscribers .word,
-.side .users-online .word { display: none; }
-.side .subscribers .number:after { content: " mexicanos bien informados"; }
-.side .users-online .number:after { content: " compatriotas que no procrastinan"; }
-.side .titlebox .redditname {
-display: block;
-font-family: arial;
-margin: 8px;
-position: absolute;
-text-align: center;
-top: 0;
+
+div.side div.spacer:nth-of-type(1) {
+    padding:250px 0 0!important;
+    background:url(%%recipes-1%%) top center no-repeat;
+    margin-top:10px
 }
-.side .titlebox .md {
-font-size: 100%;
-height: 250px;
-margin: 0 10px;
-padding: 20px;
-position: absolute;
-top: 40px;
-color: #000;
-background-color: #fff;
-border: none;
+
+#header-bottom-left {
+    background:#69D2E7;
+    height:60px;
+    border-bottom:1px solid #BBB;
+    position:relative
 }
-.side .sidebox.create { display: none; }
-.comment .userattrs+span { display:none; }
- 
-#siteTable:before {
-content: "Tema inspirado por comentarios de pewdro y duderino316";
-text-align: center;
-font-weight: bold;
-font-size: x-large;
-padding: 5em;
-color: #666;
-cursor: pointer;
+
+#header {
+    background:transparent;
+    border-bottom:0
 }
- 
-.link .usertext .md {
-background-color: #fff;
-border: none;
+
+#header .tabmenu {
+    position:relative;
+    bottom:14px;
+    left:75px
 }
- 
-.usertext-body,
-.new-comment .usertext-body {
-background: transparent;
-border: none;
+
+#header .tabmenu a {
+    color:#fff;
+    background-color:transparent;
+    border:none;
+    border-bottom:none;
+    text-shadow:none;
+    font-weight:500;
+    text-transform:uppercase;
+    padding:17px 10px
 }
- 
-.usertext-edit textarea { font-family: arial; }
- 
-.stamp acronym,
-.tagline .stickied-tagline {
-color: #fff;
-background-color: #333;
-font-weight: bold;
-padding: 3px;
-position: absolute;
-left: 5em;
-top: 0;
-width: 20em;
-text-align: center;
-border: none!important;
+
+#header .tabmenu a:hover {
+    background:#228496;
+    color:#fff;
+    text-shadow:none
 }
- 
-.stamp.nsfw-stamp acronym { background-color: #666; }
-.tagline .stickied-tagline { background-color: #666; }
- 
+
+#header-bottom-right {
+    border:none;
+    background:#66a2ad;
+    border-top:none;
+    padding:8px;
+    right:20px;
+    bottom:22px;
+    border-bottom-right-radius:3px;
+    border-bottom-left-radius:3px;
+    border-top-right-radius:0;
+    border-top-left-radius:0;
+    right:10px;
+    text-shadow:none
+}
+
+#header-img-a {
+    float:left;
+    margin-top:2px
+}
+
+.pagename.redditname {
+    color:#FFF;
+    line-height:58px;
+    position:relative;
+    left:80px;
+    bottom:-20px
+}
+
+.pagename a {
+    font-variant:normal;
+    font-size:11px!important;
+    position:absolute;
+    left:-90px;
+    height:57px;
+    width:148px;
+    text-indent:1em!important
+}
+
+#siteTable {
+    border:1px solid #CCC;
+    background:#FFF;
+    position:relative;
+    z-index:10
+}
+
+#siteTable .comment .entry .buttons li a {
+    font-size:10px;
+    color:#888
+}
+
+#header-bottom-right>span a,#header-bottom-right .flat-list a {
+    color:#ddd;
+    text-shadow:#3f7c16 0 1px;
+    color:#a2d77f
+}
+    
+#header-bottom-right .user {
+    color:#EEE14D
+}
+    
+#header-bottom-right .user a {
+    margin-right:5px
+}
+    
+#header-bottom-right .logout a {
+    color:#a2d77f
+}
+    
+#header-bottom-right .user a:first-child {
+    margin-left:5px
+}
+
+#header-bottom-right .separator {
+    visibility:hidden;
+    font-size:11px
+}
+
+.sidecontentbox .content {
+    margin:0 340px 0 0!important;
+    width:290px
+}
+
+.content .nextprev {
+    padding-bottom:15px;
+    padding-left:20px
+}
+
+#search input[type=text] {
+    color:#4D4D4D;
+    font-size:12px;
+    float:left;
+    width:290px;
+    border-bottom:1px solid #EDEDED;
+    border-left:1px solid #A5A5A5;
+    border-left:1px solid #BBB;
+    border-right:1px solid #EDEDED;
+    border-top:1px solid #A5A5A5;
+    color:#454545;
+    font:bold 16px Helvetica,Arial;
+    padding:8px 5px 6px 5px;
+    font-weight:normal;
+    box-shadow:0 -1px 0 #ddd
+}
+    
+.sidebox .nub {
+    display:none
+}
+    
+.sidebox.submit {
+    margin:auto
+}
+
+.titlebox {
+    float:left;
+    margin-top:10px
+}
+    
+.titlebox .bottom {
+    margin:10px 0
+}
+
+.morelink {
+    border:none;
+    background:transparent;
+    letter-spacing:normal;
+    height:auto
+}
+
+.morelink a {
+    color:#FFF!important;
+    width:280px;
+    margin-top:10px;
+    float:left;
+    display:table;
+    text-align:center
+}
+
+button,.morelink a {
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    display:inline-block;
+    position:relative;
+    vertical-align:baseline;
+    font-size:inherit;
+    font-weight:bold;
+    padding:3px 10px;
+    cursor:pointer;
+    font-family:inherit;
+    background:#ffb671;
+    overflow:visible;
+    height:28px;
+    text-shadow:none;
+    border:none;
+    color:#FFF;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    box-shadow:none;
+    text-transform:capitalize;
+    background:#ffb671
+}
+    
+.morelink a {
+    width:280px
+}
+    
+button:hover,.morelink a:hover {
+    background:#228496
+}
+    
+.morelink:hover {
+    background:transparent
+}
+
+button:active,button:focus,.morelink a:active,.morelink a:focus {
+    background:#66a2ad;
+    box-shadow:none;
+    text-shadow:none
+}
+    
+#siteTable {
+    box-shadow:0 1px 0 #dfdfdf
+}
+    
+#siteTable .entry {
+    line-height:20px
+}
+    
+#siteTable .entry a {
+    color:#0000ff
+}
+
+#siteTable .entry a:visited {
+    color:#551a8b;
+    opacity:0.8
+}
+    
+#siteTable .entry a:hover {
+    text-decoration:underline
+}
+    
+#siteTable .entry .domain a {
+    color:#aaa
+}
+    
+#siteTable .flat-list li {
+    margin-right:5px
+}
+    
+#siteTable .flat-list {
+    margin-top:3px
+}
+    
+#siteTable .thing .rank {
+    visibility:hidden
+}
+    
+.thing:hover {
+    background:#f9f9f9
+}
+    
+.spacer {
+    width:auto
+}
+    
+.side .spacer {
+    margin:0 0 10px
+}
+    
+.logout a {
+    font-style:italic
+}
+    
+#siteTable .del-button .togglebutton,#siteTable .remove-button .togglebutton {
+    color:red
+}
+    
+#siteTable .approve-button .togglebutton a {
+    color:#63A835
+}
+    
+#siteTable .midcol {
+    margin-right:10px
+}
+
+#siteTable .entry .child {
+    float:left;
+    padding:5px;
+    border:1px solid #CCC;
+    margin:10px 40px
+}
+    
+#siteTable .entry .title {
+    width:91%
+}
+    
+.content {
+    margin:20px 340px 0px 10px!important
+}
+
+.commentarea,#siteTable .thing {
+    padding:5px;
+    position:relative
+}
+    
+.thing {
+    border-bottom:1px solid #ddd
+}
+
+.panestack-title {
+    width:100%;
+    margin:5px 0 10px;
+    border-color:#ccc;
+    border-bottom-style:solid
+}
+
+.panestack-title .title {
+    padding-left:5px;
+    margin:0;
+    display:table
+}
+    
+.side .usertext-body .md {
+    float:left
+}
+
+.side .usertext-body ul {
+    margin:0;
+    list-style:none
+}
+    
+.side .usertext-body li {
+    display:block
+}
+
+.side .usertext-body a {
+    background:#468B17;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    display:block;
+    position:relative;
+    vertical-align:baseline;
+    font-size:14px;
+    font-weight:bold;
+    padding:2px 8px;
+    cursor:pointer;
+    font-family:inherit;
+    background-color:#69D2E7;
+    overflow:visible;
+    width:278px;
+    text-align:center;
+    text-shadow:0 1px 0 #427920;
+    border:1px solid #AAE8F3;
+    color:#FFF;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    box-shadow:0 1px 0 #ddd;
+    text-transform:capitalize;
+    border-bottom:0;
+    border-radius:0;
+    box-shadow:0 1px 0 #fff
+}
+    
+.side .usertext-body a:hover {
+    background:#228496
+}
+
+.side .usertext-body a:active,.side .usertext-body a:focus {
+    background:#5c9d31;
+    box-shadow:none;
+    text-shadow:0 -1px 0 #427920
+}
+
+#header-bottom-left .selected a {
+    background:#16CCCF;
+    color:#fff;
+    text-shadow:none
+}
+
+#header-bottom-left li:last-child {
+    display:none;
+    visibility:hidden
+}
+    
+.link.last-clicked {
+    overflow:visible
+}
+
+.linkinfo {
+    float:left;
+    width:290px;
+    margin-top:10px;
+    background-position:225px 5px;
+    border:1px solid #CCC;
+    font-size:12px
+}
+
+.linkinfo .downvotes .number,.linkinfo .upvotes .number,.linkinfo .score .number {
+    font-size:20px!important;
+    display:block;
+    font-weight:normal!important
+}
+    
+.linkinfo .score .word {
+    display:none
+}
+
+.linkinfo .upvotes,.linkinfo .downvotes,.linkinfo .score {
+    float:left;
+    padding:5px 10px 5px 0;
+    margin:8px 10px 10px 0;
+    text-align:center;
+    border-radius:3px;
+    box-shadow:0 1px 0 #ededed
+}
+
+.linkinfo .upvotes,.linkinfo .downvotes {
+    float:left;
+    margin:8px 10px 10px 0;
+    padding:7px;
+    background:#FFF;
+    border:1px solid #CCC
+}
+    
+.linkinfo .upvotes {
+    color:green
+}
+    
+.linkinfo .downvotes {
+    color:red
+}
+    
+.linkinfo {
+    padding:0
+}
+
+.linkinfo .shortlink input {
+    border-color:#ccc;
+    cursor:pointer
+}
+
+.linkinfo .score {
+    float:left;
+    padding:5px 5px 10px 0;
+    margin:8px 10px 10px 0;
+    text-align:center;
+    font-size:11px;
+    display:block;
+    min-width:80px;
+    margin-left:20px!important;
+    background:#fff;
+    border:1px solid #ccc
+}
+
+.linkinfo .date {
+    padding:5px;
+    background:#FFF;
+    border-bottom:1px solid #CCC;
+    text-align:center;
+    font-size:11px
+}
+    
+.linkinfo .date time {
+    font-weight:bold
+}
+
+.shortlink {
+    clear:both!important;
+    font-size:10px;
+    margin:0px 20px 0px 20px;
+    text-align:center
+}
+    
+.link .rank {
+    display:none
+}
+
+.sidecontentbox h1,.md p,.md h1 {
+    padding-bottom:10px;
+    padding:5px
+}
+    
+.sidecontentbox .content {
+    border-color:#CCC
+}
+    
+.sidecontentbox .title {
+    margin-bottom:10px
+}
+    
+.md ul {
+    list-style:disc outside
+}
+
+.md ul {
+    border-radius:5px;
+    border:1px solid #DDD;
+    color:#000!important;
+    font-size:90%;
+    position:relative
+}
+    
+a.thumbnail.self {
+    display:none!important
+}
+    
+a[href*="request"].title:link {
+    color:#57a921!important
+}
+    
+a[href*="request"].title:visited {
+    color:#57a921!important
+}
+    
+a[href*="request"].title:before {
+    content:""
+}
+    
+a[href*="by_request"].title,a[href*="request_response"].title,a[href*="as_requested"].title,a[href*="per_request"].title,a[href*="request_answer"].title {
+    color:#57a921!important
+}
+    
+a[href*="by_request"].title:visited,a[href*="request_response"].title:visited,a[href*="as_requested"].title:visited,a[href*="per_request"].title:visited,a[href*="request_answer"].title:visited {
+    color:#57a921!important
+}
+    
+.res_post_ups {
+    margin-right:2px!important
+}
+    
+.res_post_downs {
+    margin-left:2px!important
+}
+    
+.sidebox.create {
+    display:none
+}
+    
+.redditname .hover {
+    display:none
+}
+
+.side .md:first-child>p a:first-child {
+    font-variant:normal;
+    font-size:0!important;
+    text-indent:-9999em!important;
+    top:0;
+    position:absolute;
+    width:100%;
+    height:50px;
+    left:0;
+    background:transparent;
+    border:none;
+    box-shadow:none
+}
+
+.login-form-side {
+    float:left;
+    margin-top:10px
+}
+
+.side .md li {
+    border-bottom:1px solid #ddd;
+    box-shadow:0 1px 0 #fff
+}
+    
+.single-page .thing {
+    border-bottom:none!important
+}
+    
+.res-nightmode .thing,.res-nightmode .title {
+    color:#16c!important
+}
+    
+.res-nightmode .redditname {
+    display:none!important
+}
+    
+.res-nightmode .side a {
+    color:#fff!important
+}
+    
+.res-nightmode #header-bottom-right {
+    text-shadow:none!important
+}
+
+.res-nightmode #header-bottom-right>span a {
+    color:#000;
+    text-shadow:none!important
+}
+    
+.res-nightmode .spacer>.submit {
+    overflow:visible!important
+}
+    
+.res-nightmode #siteTable {
+    background:none!important
+}
+    
+.buttons li a {
+    color:#888!important
+}
+
+.flair-moderator-tag {
+    background-color:#57a921;
+    color:#ffffff;
+    border-color:#ffffff
+}
+
+.side .md>ul>li:last-child {
+    border-bottom:none;
+    box-shadow:none
+}
+    
+.side .md>ul {
+    background:#f5f5f5
+}
+
+.flair-request,.linkflair-request .linkflairlabel,.linkflair.linkflair-request>.linkflairlabel,.side a[href^="//#Request"] {
+    background:#5d94c3!important;
+    border-color:#121d27!important;
+    color:white
+}
+
+.flair-anp,.linkflair-anp .linkflairlabel,.linkflair.linkflair-anp>.linkflairlabel,.side a[href^="//#anp"] {
+    background:#c35d94!important;
+    border-color:#27121d!important;
+    color:white
+}
+
+.flair-anv,.linkflair-anv .linkflairlabel,.linkflair.linkflair-anv>.linkflairlabel,.side a[href^="//#anv"] {
+    background:#c35d61!important;
+    border-color:#271213!important;
+    color:white
+}
+
+.flair-mnf,.linkflair-mnf .linkflairlabel,.linkflair.linkflair-mnf>.linkflairlabel,.side a[href^="//#mnf"] {
+    background:#61c35d!important;
+    border-color:#132712!important;
+    color:white
+}
+
+.flair-cloth,.linkflair-cloth .linkflairlabel,.linkflair.linkflair-cloth>.linkflairlabel,.side a[href^="//#cloth"] {
+    background:#36648b!important;
+    border-color:#0a141b!important;
+    color:white
+}
+
+.flair-snc,.linkflair-snc .linkflairlabel,.linkflair.linkflair-snc>.linkflairlabel,.side a[href^="//#snc"] {
+    background:#353839!important;
+    border-color:#0a0b0b!important;
+    color:white
+}
+
+.flair-comp,.linkflair-comp .linkflairlabel,.linkflair.linkflair-comp>.linkflairlabel,.side a[href^="//#comp"] {
+    background:#e52d00!important;
+    border-color:#2d0900!important;
+    color:white
+}
+
+.flair-cnw,.linkflair-cnw .linkflairlabel,.linkflair.linkflair-cnw>.linkflairlabel,.side a[href^="//#cnw"] {
+    background:#007fff!important;
+    border-color:#001933!important;
+    color:white
+}
+
+.flair-ele,.linkflair-ele .linkflairlabel,.linkflair.linkflair-ele>.linkflairlabel,.side a[href^="//#ele"] {
+    background:#734f96!important;
+    border-color:#170f1e!important;
+    color:white
+}
+
+.flair-ent,.linkflair-ent .linkflairlabel,.linkflair.linkflair-ent>.linkflairlabel,.side a[href^="//#ent"] {
+    background:#014421!important;
+    border-color:#000d06!important;
+    color:white
+}
+
+.flair-trav,.linkflair-trav .linkflairlabel,.linkflair.linkflair-trav>.linkflairlabel,.side a[href^="//#trav"] {
+    background:#253529!important;
+    border-color:#070a08!important;
+    color:white
+}
+
+.flair-fnd,.linkflair-fnd .linkflairlabel,.linkflair.linkflair-fnd>.linkflairlabel,.side a[href^="//#fnd"] {
+    background:#dd0000!important;
+    border-color:#2c0000!important;
+    color:white
+}
+
+.flair-hnf,.linkflair-hnf .linkflairlabel,.linkflair.linkflair-hnf>.linkflairlabel,.side a[href^="//#hnf"] {
+    background:#98744e!important;
+    border-color:#1e170f!important;
+    color:white
+}
+
+.flair-hng,.linkflair-hng .linkflairlabel,.linkflair.linkflair-hng>.linkflairlabel,.side a[href^="//#hng"] {
+    background:#791f42!important;
+    border-color:#18060d!important;
+    color:white
+}
+
+.flair-misc,.linkflair-misc .linkflairlabel,.linkflair.linkflair-misc>.linkflairlabel,.side a[href^="//#misc"] {
+    background:#ff208c!important;
+    border-color:#33061c!important;
+    color:white
+}
+
+.flair-pro,.linkflair-pro .linkflairlabel,.linkflair.linkflair-pro>.linkflairlabel,.side a[href^="//#pro"] {
+    background:#c5360f!important;
+    border-color:#270a03!important;
+    color:white
+}
+
+.flair-mod,.linkflair-mod .linkflairlabel,.linkflair.linkflair-mod>.linkflairlabel,.side a[href^="//#mod"] {
+    background:#427920!important;
+    border-color:#0d1806!important;
+    color:white
+}
+
+.flair {
+    padding:0;
+    border:none
+}
+    
+.commentarea .usertext-edit textarea:active,.commentarea .usertext-edit textarea:focus {
+    background:transparent
+}
+    
+#newlink #link-desc {
+    font-weight:bold
+}
+
+#newlink #link-desc:after {
+    font-size:18px;
+    content:"¡Aumenta tus internets!";
+    color:red
+}
+
+#newlink #text-desc {
+    font-size:0px;
+    font-weight:bold
+}
+
+#newlink #text-desc:after {
+    font-size:18px;
+    content:"¡Aumenta tus internets!";
+    color:red
+}
+    
+span.flair-a {
+    display:none
+}
+
+.arrow {
+    width:17px;
+    height:17px
+}
+    
+.arrow.down,.arrow.downmod,.arrow.up,.arrow.upmod {
+    background-image:url(%%recipes-2%%)
+}
+    
+.arrow.down {
+    background-position:0px 0px
+}
+    
+.arrow.downmod {
+    background-position:-17px 0px
+}
+    
+.arrow.up {
+    background-position:-34px 0px
+}
+    
+.arrow.upmod {
+    background-position:-51px 0px
+}
+
+a.title[href*="imgur.com"]:before,a.title[href*="foodnetwork.com"]:before,a.title[href*="powerfulmothering.com"]:before,a.title[href*="allrecipes.com"]:before,a.title[href*="food.com"]:before,a.title[href*="nestle-family.com"]:before,a.title[href*="buzzfeed.com"]:before,a.title[href*="smittenkitchen.com"]:before,a.title[href*="bbc.co.uk"]:before,a.title[href^="/r/recipes"]:before,a.title[href*="blogspot.com"]:before,a.title[href*="wordpress.com"]:before,a.title[href*="grouprecipes.com"]:before,a.title[href*="squidoo.com"]:before {
+    background-image:url(%%recipes-3%%);
+    width:16px;
+    height:16px;
+    content:"";
+    display:inline-block;
+    position:relative;
+    top:2px;
+    margin-right:3px
+}
+    
+a.title[href*="imgur.com"]:before {
+    background-position:-0px -0px
+}
+    
+a.title[href*="foodnetwork.com"]:before {
+    background-position:-16px -0px
+}
+    
+a.title[href*="powerfulmothering.com"]:before {
+    background-position:-32px -0px
+}
+    
+a.title[href*="allrecipes.com"]:before {
+    background-position:-0px -16px
+}
+    
+a.title[href*="food.com"]:before {
+    background-position:-16px -16px
+}
+    
+a.title[href*="nestle-family.com"]:before {
+    background-position:-32px -16px
+}
+    
+a.title[href*="buzzfeed.com"]:before {
+    background-position:-0px -32px
+}
+    
+a.title[href*="bbc.co.uk"]:before {
+    background-position:-16px -32px
+}
+    
+a.title[href*="smittenkitchen.com"]:before {
+    background-position:-32px -32px
+}
+    
+a.title[href^="/r/recipes"]:before {
+    background-position:-0px -48px
+}
+    
+a.title[href*="blogspot.com"]:before {
+    background-position:-16px -48px
+}
+    
+a.title[href*="wordpress.com"]:before {
+    background-position:-32px -48px
+}
+    
+a.title[href*="grouprecipes.com"]:before {
+    background-position:-0px -64px
+}
+    
+a.title[href*="squidoo.com"]:before {
+    background-position:-16px -64px
+}
+
+.flair {
+    color:#000;
+    font-size:inherit;
+    border:black;
+    padding:0;
+    margin-right:5px
+}
+
+.flairselector li:hover {
+    background-color:transparent;
+    border-color:transparent
+}
+    
+.linkflairlabel {
+    font-size:medium
+}
+    
+.flat-list.buttons .flairselectbtn {
+    font-size:0px
+}
+
+.flat-list.buttons a.flairselectbtn:before {
+    content:"No hay flairs para las publicaciones :(";
+    font-size:10px;
+    color:Black;
+    padding:0px 8px 0px 4px;
+    background-color:lightgreen;
+    border-color:darkgreen;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px
+}
+
+.linkflair-Request .linkflairlabel,.linkflair-Request>.linkflairlabel {
+    background-color:#69D2E7;
+    border-color:red
+}
+
+.linkflair-Breakfast .linkflairlabel,.Recipeslinkflair-Question>.linkflairlabel {
+    background-color:#FFA2A2;
+    border-color:red
+}
+
+.linkflair-Lunch .linkflairlabel,.linkflair-Simple>.linkflairlabel {
+    background-color:#99CC33;
+    border-color:#99CC33
+}
+
+.linkflair-Dinner .linkflairlabel,.linkflair-Discussion>.linkflairlabel {
+    background-color:#FA6900;
+    border-color:red
+}
+
+.linkflair-Dinner .linkflairlabel,.linkflair-Budget>.linkflairlabel {
+    background-color:#F38630;
+    border-color:red
+}
+    
+.content .link {
+    margin-bottom:0
+}
+
 a[href*=extrapalapaquetl] {
-display: inline-block;
-vertical-align: middle;
-width: 500px;
-height: 500px;
-background: transparent url(%%extrapalapaquetl%%) 0 0 no-repeat;
-text-indent: -9999px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 500px;
+    height: 500px;
+    background: transparent url(%%extrapalapaquetl%%) 0 0 no-repeat;
+    text-indent: -9999px;
 }
 
 .footer-parent {
