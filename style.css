@@ -19,14 +19,14 @@ body,.side {
 }
 
 div.side div.spacer:nth-of-type(1) {
-    padding:250px 0 0!important;
-    background:url(%%recipes-1%%) top center no-repeat;
+    padding:170px 0 0!important;
+    background:url(%%techo-blanco%%) top center no-repeat;
     margin-top:10px
 }
 
 #header-bottom-left {
     background:#69D2E7;
-    height:60px;
+    height:154px;
     border-bottom:1px solid #BBB;
     position:relative
 }
@@ -75,7 +75,7 @@ div.side div.spacer:nth-of-type(1) {
 }
 
 #header-img-a {
-    float:left;
+    float:none;
     margin-top:2px
 }
 
