@@ -1,1 +1,4 @@
-Sub en reparación *del cochinero*. Por su atención, gracias.
+Philip Glass:
+
+* [Metamorphosis](http://www.youtube.com/watch?v=4qAAPRbRSc0)
+* [Mishima](http://www.youtube.com/watch?v=G0Y4m7ty8p8)
