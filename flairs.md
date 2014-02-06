@@ -10,3 +10,10 @@ derby-gold
 derby-white-flower
 derby-white
 text-gold
+
+## Link flairs
+lunes
+martes
+miercoles
+jueves
+viernes
